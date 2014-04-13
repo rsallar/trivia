@@ -45,7 +45,7 @@ public class Game {
 	}
 	
 	public boolean remove(String playerName) {
-	  players.remove(howManyPlayers());
+	  players.remove(playerName);
 	  return true;
 	}
 	

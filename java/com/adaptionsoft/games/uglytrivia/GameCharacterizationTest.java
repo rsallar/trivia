@@ -82,16 +82,9 @@ public class GameCharacterizationTest {
 		assertEquals(caption7, out.toString().replace("\r\n", " "));
 	}
 	
-	@Test
-	public void game_should_allow_a_sixth_user(){
-		game.add("Lincoln");
-		game.add("Zapatero");
-		game.add("Hollande");
-		game.add("Evita");
-		game.add("Karl");
-		
-		assertEquals(true, game.add("Einstein"));
-	}
+	
+	
+	
 	
 	
 	

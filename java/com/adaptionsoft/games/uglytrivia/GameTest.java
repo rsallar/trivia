@@ -23,4 +23,14 @@ public class GameTest {
 		
 		assertEquals(true, game.add("Einstein"));
 	}
+	
+	@Test
+	public void game_should_allow_a_user_to_leave_during_a_game(){
+		game.add("Lincoln");
+		game.add("Zapatero");
+		
+		game.roll(1);
+		assertEquals(true, game.remove("Zapatero"));
+	}
+
 }
