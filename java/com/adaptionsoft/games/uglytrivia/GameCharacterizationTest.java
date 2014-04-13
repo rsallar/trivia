@@ -14,6 +14,7 @@ public class GameCharacterizationTest {
 	
 	private final String caption1 = "Lincoln was added They are player number 1 Lincoln is the current player They have rolled a 1 Lincoln's new location is 1 The category is Science Science Question 0 ";
 	private final String caption2 = "Lincoln was added They are player number 1 Question was incorrectly answered Lincoln was sent to the penalty box ";
+	private final String caption3 = "Lincoln was added They are player number 1 Question was incorrectly answered Lincoln was sent to the penalty box Lincoln is the current player They have rolled a 2 Lincoln is not getting out of the penalty box ";
 		
 	
 	@Before
@@ -34,6 +35,14 @@ public class GameCharacterizationTest {
 		game.add("Lincoln");
 		game.wrongAnswer();
 		assertEquals(caption2, out.toString().replace("\r\n", " "));
+	}
+	
+	@Test
+	public void user_can_not_leaves_penalty_box(){
+		game.add("Lincoln");
+		game.wrongAnswer();
+		game.roll(2);
+		assertEquals(caption3, out.toString().replace("\r\n", " "));
 	}
 	
 
