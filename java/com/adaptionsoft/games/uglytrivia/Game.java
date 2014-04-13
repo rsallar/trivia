@@ -31,15 +31,6 @@ public class Game {
 		return "Rock Question " + index;
 	}
 
-	/**
-	 * Return true if the game is playable.
-	 * 
-	 * @return true if the game is playable.
-	 */
-	public boolean isPlayable() {
-		return (howManyPlayers() >= 2);
-	}
-
 	public boolean add(String playerName) {
 		
 		
